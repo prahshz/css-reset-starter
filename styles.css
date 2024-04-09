@@ -1,4 +1,51 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
 /* CSS VARIABLES */
 :root{
@@ -38,6 +85,17 @@ header, footer{
     background-color: var(--mint);
 }
 
+h1, h2, h3{
+    font-weight: bold;
+
+}
+
+h1{
+    font-weight: bold;
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
 /* Navigation Styles */
 nav{
     width: 50%;
@@ -50,6 +108,7 @@ nav ul{
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
     padding: 0;
+    margin: 1em 0;
 }
 
 nav a{
@@ -60,6 +119,8 @@ nav a{
     background-color: var(--red);
     color: var(--white);
 }
+
+
 
 /* Nav Hover Styles */
 nav a:hover{
@@ -75,6 +136,15 @@ main > section{
 /* Styles for the h2 & h3 tags */
 h2, h3{
     text-align: center;
+}
+h2{
+    font-size: 1.5em;
+    margin: 0.83em 0;
+}
+
+h3{
+    font-size: 1.7em;
+    margin: 1em 0;
 }
 
 /* Paragraph Styles */
@@ -132,6 +202,7 @@ input:focus, input:focus-visible, textarea:focus, textarea:focus-visible{
 /* input styles */
 input{
     height: 2rem;
+    padding: 1px 2px;
 }
 
 /* Fieldset Styles */
@@ -140,7 +211,11 @@ fieldset{
     grid-template-columns: 0.25fr 6fr 0.25fr 6fr;
     gap: 1rem;
     margin: 1rem 0;
-    border-color: var(--red);
+    padding: 0.35em 0.75em 0.65em 0.75em;
+    border-color: 2px groove var(--red);
+}
+legend{
+    padding: 0 2px;
 }
 
 /* Code for Custom Radios - Compare to Your zyBook, I added additional code to make these match my form styles */
@@ -210,6 +285,10 @@ textarea{
 #my-submit:hover{
     background-color: var(--coral);
     color: var(--dk-gray);
+}
+
+figure{
+    margin: 1em 40px;
 }
 
 /* Code Styles */
